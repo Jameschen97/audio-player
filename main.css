@@ -1,0 +1,41 @@
+audio {
+    display: none;
+}
+
+.qing-player {
+    height: 600px;
+    width: 400px;
+    border: 2px black solid;
+}
+
+.qing-player-window {
+    opacity: 0.6;
+    background: url('imgs/background.png');
+    background-size: 100%, 100%;
+    height: 500px;
+    width: 400px;
+    text-align: center;
+}
+.qing-player-controls {
+    background-color: #f5f5f5;
+
+}
+
+.qing-player-controls img{
+    transition: height 1s, width 1s ;
+}
+/* .qing-player-controls { */
+.control-player-img {
+    /* filter: grayscale(100%); */
+}
+
+.img-active {
+    filter: grayscale(100%);
+    height: 90px;
+    width: 90px;
+    transition: 0.5s;
+}
+
+#id-input-v {
+
+}

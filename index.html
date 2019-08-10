@@ -2,15 +2,25 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title> Player </title>
+    <link rel="stylesheet" href="./main.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
+    <div class="qing-player">
+      <div class="qing-player-window">
+        I love you 3000 times.
+      </div>
+      <div class="qing-player-controls" data-music=3 data-active=1 data-play=0>
+        <audio id="id-qing-player" src='music/0.mp3'></audio>
+        <img id="id-img-before" class="control-player-img img-active " src="./imgs/before.png" alt="">
+        <img id="id-img-play" class="control-player-img img-active" src="./imgs/play.png" alt="">
+        <img id="id-img-after" class="control-player-img img-active" src="./imgs/after.png" alt="">
+        <input id="id-input-v" type="range">
+      </div>
+    </div>
     <!-- You can also require other files to run in this process -->
+    <script src="./utils.js"></script>
+    <script src="./controls.js"></script>
     <script src="./renderer.js"></script>
   </body>
 </html>
