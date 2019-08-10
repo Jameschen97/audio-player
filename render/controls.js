@@ -1,17 +1,15 @@
 var playToggle = function(p, target, play_status) {
+    var img_play = find(target, '#id-img-play')
     if (play_status == 0) {
         target.dataset.play = 1
-        var img_play = find(target, '#id-img-play')
-        var src = "imgs/" + "pause" + ".png"
-        img_play.src = src
+        var action = "pause"
         p.play()
     } else {
         target.dataset.play = 0
+        var action = "play"
         p.pause()
-        var img_play = find(target, '#id-img-play')
-        var src = "imgs/" + "play" + ".png"
-        img_play.src = src
     }
+    img_play.src = `./img/${action}.png`
 }
 
 var bindPlay = function() {
@@ -37,7 +35,7 @@ var nextPlay = function() {
 
         target.dataset.active = nextId
 
-        var src = 'music/' + nextId + '.mp3'
+        var src = './music/' + nextId + '.flac'
         p.src = src
         p.play()
     })
@@ -58,14 +56,14 @@ var afterPlay = function() {
     beforemusic.addEventListener('click', function(event) {
         var target = event.target.parentElement
         var id = Number(target.dataset.active)
-        log('id:', id)
+
         var musics = Number(target.dataset.music)
         var before = beforeId(musics, id)
-        log('beforeId:',before, 'nums:',musics)
+
 
         target.dataset.active = before
 
-        var src = 'music/' + before + '.flac'
+        var src = './music/' + before + '.flac'
         p.src = src
         p.play()
     })
