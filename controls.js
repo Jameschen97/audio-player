@@ -65,7 +65,7 @@ var afterPlay = function() {
 
         target.dataset.active = before
 
-        var src = 'music/' + before + '.mp3'
+        var src = 'music/' + before + '.flac'
         p.src = src
         p.play()
     })
