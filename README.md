@@ -14,4 +14,7 @@ cd audio-player
 npm install
 # Run the app
 npm start
+
+# Pack the app
+npm run pack-win
 ```
